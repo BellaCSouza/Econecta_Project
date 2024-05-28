@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="" content="1;index.html">
+  <title>EcoNecta</title>
+  <link rel="stylesheet" type="text/css" href="css/estilo.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+
+<body>
+  <!-- MENU -->
+  <div class="grid_menu">
+    <div class="backMenu">
+      <div class="container text-center">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/Logotipo_Escrito.png" alt="imgLogin" width="250px">
+          </a>
+        </div>
+      </div>
+      <div class="pesquisar">
+        <input type="text" id="txtPesquisa" placeholder="Pesquisar..."/>
+          <img src="img/lupa.png" alt="pesquisar" width="20px">
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contatos">Contato</a></li>
+          <li><a href="cadastro.html">Entre ou Cadastre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- CARROSEL -->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+        aria-label="Slide 1" aria-current="true"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"
+        class=""></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"
+        class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <title>Placeholder</title>
+          <rect width="100%" height="100%" fill="#f5f5f5"></rect>
+          <text x="50%" y="50%" fill="#aaa" dy=".3em">Últimos Artigos</text>
+        </svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Descubra nossos conteúdos mais recentes!</h5>
+          <p>Clique aqui e saiba mais.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <rect width="100%" height="100%" fill="#eee"></rect>
+          <text x="50%" y="50%" fill="#bbb" dy=".3em">Receitas Saudáveis</text>
+        </svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Aproveite o sabor fresco da horta em cada prato!</h5>
+          <p>Clique aqui e saiba mais.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400"
+          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide"
+          preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="img/Carousel_DicaSustentavel.jpg" width="800" height="400">
+          <rect width="100%" height="100%" fill="#e5e5e5"></rect>
+          <text x="50%" y="50%" fill="#999" dy=".3em">Dicas Sustentáveis</text>
+        </svg>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Pequenas ações para um mundo mais verde!</h5>
+          <p>Clique aqui e saiba mais.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- SOBRE -->
+  <div class="texto_sobre" id="sobre">
+    <center>
+      <h3>Sobre</h3>
+    </center>
+    <p>Esse site é uma plataforma dedicada a uma horta automatizada e comunitária inovadora. Nossa missão é promover a
+      agricultura urbana e conectar as pessoas com o cultivo de alimentos de forma sustentável.<br>Aqui está uma breve
+      descrição do nosso site:<br>Visão Geral: Nosso site é o ponto de partida para qualquer pessoa interessada em se
+      envolver com nossa horta automatizada e comunitária.<br>Ele serve como um hub informativo e uma porta de entrada
+      para nossa comunidade online.</p>
+  </div>
+
+
+
+  <!-- FÓRUM -->
+  <div class="container">
+    <div class="response-group">
+      <header>
+        <h2>
+          <strong>Lesson Title</strong><i class="fa fa-angle-right"></i><span class="header-dropdown-trigger">Activity
+            Title</span>
+        </h2>
+      </header>
+      <div class="header-dropdown">
+        <div class="panel">
+          <ul>
+            <li>
+              <h2>
+                Activity Title
+              </h2>
+              <span>2/4</span>
+              <div class="progress">
+                <div class="progress__complete"></div>
+              </div>
+            </li>
+            <li>
+              <h2>
+                Activity Title
+              </h2>
+              <span>2/4</span>
+              <div class="progress">
+                <div class="progress__complete"></div>
+              </div>
+            </li>
+            <li>
+              <h2>
+                Activity Title
+              </h2>
+              <span>2/4</span>
+              <div class="progress">
+                <div class="progress__complete"></div>
+              </div>
+            </li>
+            <li>
+              <h2>
+                Activity Title
+              </h2>
+              <span>2/4</span>
+              <div class="progress">
+                <div class="progress__complete"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="response">
+        <div class="response__number">
+          1
+        </div>
+        <h1 class="response__title">
+          Coffee emporium avondale humid german rivertown vine street findlay market historic architecture?
+        </h1>
+        <div class="post-group">
+          <div class="post">
+            <div class="post__avatar"></div>
+            <h3 class="post__author">
+              Lester McTester
+            </h3>
+            <h4 class="post__timestamp">
+              Oct 13 at 8:51pm
+            </h4>
+            <p class="post__body">
+              Hamilton county river front museum center washington park breweries walnut hills findlay market christian
+              moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium chili.
+            </p>
+            <div class="post__actions">
+              <div class="button button--approve">
+                <i class="fa fa-thumbs-o-up"></i><i class="fa fa-thumbs-up solid"></i>
+              </div>
+              <div class="button button--deny">
+                <i class="fa fa-thumbs-o-down"></i><i class="fa fa-thumbs-down solid"></i>
+              </div>
+              <div class="button button--fill comment-trigger">
+                <span>Comment...</span>
+              </div>
+              <div class="button button--flag">
+                <i class="fa fa-comment-o"></i><i class="fa fa-comment solid"></i>2
+              </div>
+              <div class="post__comments">
+                <div class="comment-group">
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment-form">
+                  <div class="comment-form__avatar"></div>
+                  <textarea></textarea>
+                  <div class="comment-form__actions">
+                    <div class="button button--light cancel">
+                      Cancel
+                    </div>
+                    <div class="button button--confirm">
+                      Comment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__avatar"></div>
+            <h3 class="post__author">
+              Lester McTester
+            </h3>
+            <h4 class="post__timestamp">
+              Oct 13 at 8:51pm
+            </h4>
+            <p class="post__body">
+              Hamilton county river front museum center washington park breweries walnut hills findlay market christian
+              moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium chili.
+            </p>
+            <div class="post__actions">
+              <div class="button button--approve">
+                <i class="fa fa-thumbs-o-up"></i><i class="fa fa-thumbs-up solid"></i>
+              </div>
+              <div class="button button--deny">
+                <i class="fa fa-thumbs-o-down"></i><i class="fa fa-thumbs-down solid"></i>
+              </div>
+              <div class="button button--fill comment-trigger">
+                <span>Comment...</span>
+              </div>
+              <div class="button button--flag">
+                <i class="fa fa-comment-o"></i><i class="fa fa-comment solid"></i>2
+              </div>
+              <div class="post__comments">
+                <div class="comment-group">
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment-form">
+                  <div class="comment-form__avatar"></div>
+                  <textarea></textarea>
+                  <div class="comment-form__actions">
+                    <div class="button button--light cancel">
+                      Cancel
+                    </div>
+                    <div class="button button--confirm">
+                      Comment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post__avatar"></div>
+            <h3 class="post__author">
+              Lester McTester
+            </h3>
+            <h4 class="post__timestamp">
+              Oct 13 at 8:51pm
+            </h4>
+            <p class="post__body">
+              Hamilton county river front museum center washington park breweries walnut hills findlay market christian
+              moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium chili.
+            </p>
+            <div class="post__actions">
+              <div class="button button--approve">
+                <i class="fa fa-thumbs-o-up"></i><i class="fa fa-thumbs-up solid"></i>
+              </div>
+              <div class="button button--deny">
+                <i class="fa fa-thumbs-o-down"></i><i class="fa fa-thumbs-down solid"></i>
+              </div>
+              <div class="button button--fill comment-trigger">
+                <span>Comment...</span>
+              </div>
+              <div class="button button--flag">
+                <i class="fa fa-comment-o"></i><i class="fa fa-comment solid"></i>2
+              </div>
+              <div class="post__comments">
+                <div class="comment-group">
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                  <div class="post">
+                    <div class="post__avatar comment__avatar"></div>
+                    <h3 class="post__author">
+                      Lester McTester
+                    </h3>
+                    <h4 class="post__timestamp">
+                      Oct 13 at 8:51pm
+                    </h4>
+                    <p class="post__body">
+                      Hamilton county river front museum center washington park breweries walnut hills findlay market
+                      christian moerlein flying pig ohio valley jazz festival union terminal fifty west coffee emporium
+                      chili.
+                    </p>
+                  </div>
+                </div>
+                <div class="comment-form">
+                  <div class="comment-form__avatar"></div>
+                  <textarea></textarea>
+                  <div class="comment-form__actions">
+                    <div class="button button--light cancel">
+                      Cancel
+                    </div>
+                    <div class="button button--confirm">
+                      Comment
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- CONTATOS -->
+  <div class="title_contatos" id="contatos">
+    <h2>Contatos da Empresa</h2>
+  </div>
+  <div class="container">
+    <div class="contact1">
+      <div class="img_endereco">
+        <a
+          href="https://www.google.com.br/maps/place/Escola+SENAI+Prof.+Dr.+Euryclides+de+Jesus+Zerbini/@-22.91505,-47.0585059,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8cf3303ceff43:0xea485c60a4b21ef5!8m2!3d-22.91505!4d-47.055931!16s%2Fg%2F11c32n8530?entry=ttu">
+          <img src="img/icon_endereco.jfif" alt="Endereço">
+        </a>
+      </div>
+      <h3>Endereço</h3>
+      <p>Rua x n: 11, Senai Zerbini</p>
+    </div>
+    <div class="contact2">
+      <div class="img_email">
+        <a
+          href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%3Fhl%3Dpt-BR&emr=1&hl=pt-BR&ifkv=AYZoVhcA95tFNBR5vInvq3wgS5C5FhX2as_3zVp87gnMH4c9oZKw3Rpg1GcllPtvJyGmqBl3doN8TQ<mpl=default<mplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1325274590%3A1695429944868164&theme=glif">
+          <img src="img/icon_email.jpg" alt="E-mail">
+        </a>
+      </div>
+      <h3>E-mail</h3>
+      <p>EmpresaEcoNecta@gmail.com</p>
+    </div>
+    <div class="contact3">
+      <div class="img_telefone">
+        <a>
+          <img src="img/phone.png" alt="Telefone" width="300px">
+        </a>
+      </div>
+      <h3>Telefone</h3>
+      <p>WhatsApp: (19) 9999-9999</p>
+    </div>
+  </div>
+
+  <!--FOOT LINKS-->
+  <div id="footer_links" class="footer-navigation-links">
+    <div class="footer-navigation-links-column footer-seo-links-to-html-sitemaps">
+      <ul class="footer-navigation-links-list">
+        <li class="footer-navigation-link">
+          <a href="https://www.apple.com/br/store" data-ga="seoindexlinks">
+            IOS
+          </a>
+        </li>
+        <li class="footer-navigation-link">
+          <a href="https://play.google.com/store/games" data-ga="seoindexlinks">
+            ANDROID
+          </a>
+        </li>
+      </ul>
+
+
+      <div class="info_participante" id="info_participante">
+
+        <img src="img/icon_marcus.png" width="70px" class="marcus"> MARCUS NUNES
+        <img src="img/linkedin.png" width="20px">
+
+        <img src="img/icon_dotto.png" width="70px" class="dotto"> MATEUS DOTTO
+        <img src="img/linkedin.png" width="20px">
+
+        <br><img src="img/icon_anna.png" width="70px" class="anna"> ANNA ABREU
+        <img src="img/linkedin.png" width="20px">
+
+        <img src="img/icon_iza.png" width="70px" class="iza"> IZABELLA SOUZA
+        <img src="img/linkedin.png" width="20px">
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sobre_colab">
+    <!-- Conteúdo sobre colaboração -->
+  </div>
+</body>
+
+</html>

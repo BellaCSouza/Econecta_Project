@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNecta</title>
+
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Entrar</h1>
+            <div id='mensagemErro'></div>
+            <div id='mensagemSucesso'></div>
+
+            <form id="formUsuarios">
+
+                <div class="label-float">
+                    <input id="email" type="email" placeholder=" " required>
+                    <label id=labelemail for="email">Email</label>
+                </div>
+
+
+                <div class="label-float">
+                    <input id="senha" type="password" placeholder=" " required>
+                    <label id=labelSenha for="senha">Senha</label>
+                    <i id="verSenha" class="fa fa-eye-slash"></i>
+                </div>
+
+                <div class="justify-center">
+                    <button type="button" onclick="entrarUsuario()">Entrar</button>
+                </div>
+            </form>
+        </div>
+
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+
+
+    <ul id="listaUsuarios"></ul>
+
+    <script>
+        async function criarUsuario() {
+            const nome = document.getElementById('nome').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            const response = await fetch('/usuarios', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ nome, sobrenome, email, senha }),
+            });
+
+            const data = await response.json();
+            alert(data.mensagem);
+
+            // Limpar formulário após criação do usuário
+            document.getElementById('formUsuarios').reset();
+
+            // Atualizar lista de usuários
+            listarUsuarios();
+        }
+
+        async function listarUsuarios() {
+            const response = await fetch('/usuarios');
+            const usuarios = await response.json();
+
+            const listaUsuarios = document.getElementById('listaUsuarios');
+            listaUsuarios.innerHTML = '';
+
+            usuarios.forEach((usuario) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${usuario.nome} ${usuario.sobrenome} (${usuario.email})`;
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Deletar';
+                deleteButton.addEventListener('click', () => deletarUsuario(usuario.codigo));
+
+                listItem.appendChild(deleteButton);
+                listaUsuarios.appendChild(listItem);
+            });
+        }
+
+        async function deletarUsuario(codigo) {
+            const response = await fetch(`/usuarios/${codigo}`, {
+                method: 'DELETE',
+            });
+
+            const data = await response.json();
+            alert(data.mensagem);
+
+            // Atualizar lista de usuários após exclusão
+            listarUsuarios();
+        }
+
+        // Atualizar lista de usuários na inicialização
+        listarUsuarios();
+    </script>
+
+
+
+</body>
+
+</html>
