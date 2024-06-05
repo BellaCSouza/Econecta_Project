@@ -29,7 +29,7 @@ body {
 
 .pesquisar {
   color: #D7B369;
-  margin-top: -315px;
+  margin-top: -200px;
   margin-left: -40px;
   border-color: #D7B369;
   border-radius: 50px;
@@ -316,7 +316,7 @@ body #scene #right-zone {
  
 .logo {
   float: left;
-  margin-top: -100px;
+  margin-top: -50px;
   margin-left: -400px;
 }
 
