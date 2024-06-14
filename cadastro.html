@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNecta</title>
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="stylesheet" href="JS/bd.js">
+</head>
+<body>
+<!-- 
+
+
+
+
+
+
+    <h2>Usuários</h2>
+    <form id="formUsuario">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    <div id="usuarios">  </div>
+  
+    <script src="app.js">  </script>
+  
+  
+  
+    
+    
+
+
+ -->
+
+    <div class="container">
+        <div class="card">
+            <h1>Cadastrar</h1>
+            <div id='mensagemErro'></div>
+            <div id='mensagemSucesso'></div>
+            <form id="formUsuarios">
+                <div class="label-float">
+                    <input type="text" id="nome" placeholder="" required>
+                    <label id=labelNome for="nome">Nome</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" id="sobrenome" placeholder="" required>
+                    <label id=labelSobrenome for="sobrenome">Sobrenome</label>
+                </div>
+                <div class="label-float">
+                    <input id="email" type="email" placeholder="" required>
+                    <label id=labelEmail for="email">Email</label>
+                </div>
+                <div class="label-float">
+                    <input id="senha" type="password" placeholder="" required>
+                    <label id=labelSenha for="senha">Senha</label>
+                    <i id="verSenha" class="fa fa-eye-slash"></i>
+                </div>
+                <div class="label-float">
+                    <input type="password" id="confirmarSenha" placeholder="" required>
+                    <label id=labelConfirmarSenha for="confirmarSenha">Confirmar Senha</label>
+                    <i id="verConfirmarSenha" class="fa fa-eye-slash"></i>
+                </div>
+                
+                <div class="justify-center">
+                    <button type="button" onclick="criarUsuario()">Cadastrar</button>
+                </div>
+                <p>Já possui uma conta? <a href="entrar.html">Entrar</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/83bbcb24d1.js" crossorigin="anonymous"></script>
+    <script src="bd.js"></script>
+    <ul id="listaUsuarios"></ul>
+
+
+    <script>
+        window.onload = function() {
+    // Função para alternar a visibilidade da senha
+    function togglePasswordVisibility(id) {
+        var passwordInput = document.getElementById(id);
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
+    }
+
+    // Adicionar evento de clique aos botões de visualização da senha
+    document.getElementById("verSenha").addEventListener("click", function() {
+        togglePasswordVisibility("senha");
+    });
+    document.getElementById("verConfirmarSenha").addEventListener("click", function() {
+        togglePasswordVisibility("confirmarSenha");
+    });
+
+    async function criarUsuario() {
+        const nome = document.getElementById('nome').value;
+        const sobrenome = document.getElementById('sobrenome').value;
+        const email = document.getElementById('email').value;
+        const senha = document.getElementById('senha').value;
+
+        // Aqui você deve substituir '/usuarios' pela URL do seu servidor
+        const response = await fetch('http://127.0.0.1:3306', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ nome, sobrenome, email, senha }),
+        });
+
+        const data = await response.json();
+        alert(data.mensagem);
+
+        // Limpar formulário após criação do usuário
+        document.getElementById('formUsuarios').reset();
+
+        // Atualizar lista de usuários
+        listarUsuarios();
+    }
+
+    async function listarUsuarios() {
+        // Aqui você deve substituir '/usuarios' pela URL do seu servidor
+        const response = await fetch('http://127.0.0.1:3306');
+        const usuarios = await response.json();
+        const listaUsuarios = document.getElementById('listaUsuarios');
+        listaUsuarios.innerHTML = '';
+
+        usuarios.forEach((usuario) => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${usuario.nome} ${usuario.sobrenome} (${usuario.email})`;
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Deletar';
+            deleteButton.addEventListener('click', () => deletarUsuario(usuario.codigo));
+            listItem.appendChild(deleteButton);
+            listaUsuarios.appendChild(listItem);
+        });
+    }
+
+    async function deletarUsuario(codigo) {
+        // Aqui você deve substituir `/usuarios/${codigo}` pela URL do seu servidor
+        const response = await fetch(`http://127.0.0.1:3306/${codigo}`, {
+            method: 'DELETE',
+        });
+
+        const data = await response.json();
+        alert(data.mensagem);
+
+        // Atualizar lista de usuários após exclusão
+        listarUsuarios();
+    }
+
+    // Atualizar lista de usuários na inicialização Teste 12
+    listarUsuarios();
+};
+
+    </script>
+    </body>
+    </html>
